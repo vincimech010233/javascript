@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Monedas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Conversor de Monedas</h1>
+        <div class="formulario">
+            <input type="number" id="cantidad" placeholder="Cantidad">
+            <select id="monedaOrigen">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <!-- Agrega más monedas si es necesario -->
+            </select>
+            <select id="monedaDestino">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <button onclick="convertir()">Convertir</button>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
