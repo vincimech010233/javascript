@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ff0000; 
+}
+
+h1 {
+    font-size: 300px; 
+    color: white; 
+    background: url('marvel.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen al tamaño del texto */
+    -webkit-background-clip: text; /* Clip de fondo solo en el texto */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* Rellena el texto con la imagen */
+    text-align: center;
+}

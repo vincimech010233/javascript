@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Alternativo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; 
+        }
+
+        .logo {
+            position: relative;
+            height: 250px;
+            width: 60px;
+            background: #4A90E2; 
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            background: #4A90E2;
+            height: 250px;
+            width: 60px;
+            left: 90px; 
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            background: #333;
+            height: 20px;
+            width: 175px;
+            left: -15px;
+            bottom: -10px;
+            border-radius: 50%; 
+        }
+
+        .center-bar {
+            position: absolute;
+            height: 250px;
+            width: 60px;
+            background: #D64545; 
+            left: 46px;
+            transform: skew(15deg); 
+            box-shadow: 0 0 10px -4px #333; 
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <span class="center-bar"></span>
+    </div>
+</body>
+</html>

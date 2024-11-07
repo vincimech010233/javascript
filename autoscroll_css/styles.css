@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.scroll-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+.scroll-content {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 25s linear infinite; /* Modificar la velocidad */
+}
+
+/* Animación de autoscroll */
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
