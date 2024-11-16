@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulación del Experimento de la Doble Rendija</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        .controls label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulación del Experimento de la Doble Rendija</h1>
+    <div class="controls">
+        <label for="wavelength">Longitud de onda (nm):</label>
+        <input type="number" id="wavelength" value="500" min="380" max="750">
+        <label for="slitSeparation">Separación de las rendijas (μm):</label>
+        <input type="number" id="slitSeparation" value="100" min="10" max="500">
+        <button onclick="drawPattern()">Actualizar</button>
+    </div>
+    <canvas id="canvas" width="800" height="400"></canvas>
+
+    <script>
+        function drawPattern() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            ctx.clearRect(0, 0, width, height);
+
+            const wavelength = parseFloat(document.getElementById('wavelength').value) * 1e-9; // Convertir nm a metros
+            const slitSeparation = parseFloat(document.getElementById('slitSeparation').value) * 1e-6; // Convertir μm a metros
+
+            const screenDistance = 1; 
+            const scale = 1e6; 
+
+            for (let x = -width / 2; x < width / 2; x++) {
+                const theta = Math.atan(x / (scale * screenDistance));
+                const delta = (2 * Math.PI * slitSeparation * Math.sin(theta)) / wavelength;
+                const intensity = Math.cos(delta / 2) ** 2;
+
+                const y = (1 - intensity) * height;
+
+                ctx.fillStyle = `rgb(${intensity * 255}, ${intensity * 255}, ${intensity * 255})`;
+                ctx.fillRect(x + width / 2, y, 1, height - y);
+            }
+        }
+
+        drawPattern();
+    </script>
+</body>
+</html>
