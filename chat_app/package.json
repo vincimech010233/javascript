@@ -1,4 +1,9 @@
 {
+  "name": "local-socket-chat",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
   "dependencies": {
     "express": "^4.21.1",
     "socket.io": "^4.8.1"
