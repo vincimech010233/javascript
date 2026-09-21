@@ -38,6 +38,8 @@ Projects named as login or messaging demonstrations are local educational exampl
 
 This is an archive of small exercises rather than a single production application. The strongest projects may later be extracted into focused repositories with tests and deployment instructions.
 
+`proyecto_marvel/` is excluded from selected work until the provenance of `marvel.jpg` is verified. The image is retained unchanged and is not covered by a repository license.
+
 ## License
 
 No repository-wide license has been selected.

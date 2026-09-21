@@ -36,6 +36,8 @@ Los proyectos de inicio de sesión o mensajería son ejemplos educativos locales
 
 Es un archivo de ejercicios pequeños, no una única aplicación de producción. Los proyectos más sólidos podrán separarse después en repositorios independientes con pruebas e instrucciones de despliegue.
 
+`proyecto_marvel/` queda excluido de los proyectos seleccionados hasta verificar la procedencia de `marvel.jpg`. La imagen se conserva sin cambios y no queda cubierta por una licencia del repositorio.
+
 ## Licencia
 
 No se ha seleccionado una licencia global.
