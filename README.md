@@ -17,7 +17,7 @@ A collection of small browser and Node.js projects used to practise interface be
 Open its `index.html` directly, or serve the repository locally:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
 Then visit `http://localhost:8000`.
@@ -27,8 +27,11 @@ Then visit `http://localhost:8000`.
 ```bash
 cd chat_app
 npm ci
+npm test
 node server.js
 ```
+
+The chat listens on `127.0.0.1:3000`. Its automated tests cover static files from a different working directory, missing/private paths, and message delivery between two local clients. GitHub Actions runs these tests with Node.js 22. This prototype has no authentication, persistence, or public-service hardening.
 
 ## Security and privacy
 
@@ -37,6 +40,8 @@ Projects named as login or messaging demonstrations are local educational exampl
 ## Portfolio status
 
 This is an archive of small exercises rather than a single production application. The strongest projects may later be extracted into focused repositories with tests and deployment instructions.
+
+`proyecto_marvel/` is excluded from selected work until the provenance of `marvel.jpg` is verified. The image is retained unchanged and is not covered by a repository license.
 
 ## License
 
