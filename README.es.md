@@ -17,7 +17,7 @@ Colección de pequeños proyectos para navegador y Node.js con los que practicar
 Para proyectos de navegador, abre su `index.html` o sirve el repositorio:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
 Para el prototipo de chat:
@@ -25,8 +25,11 @@ Para el prototipo de chat:
 ```bash
 cd chat_app
 npm ci
+npm test
 node server.js
 ```
+
+El chat escucha en `127.0.0.1:3000`. Sus pruebas automáticas cubren archivos estáticos desde otro directorio, rutas inexistentes/privadas y entrega de mensajes entre dos clientes locales. GitHub Actions ejecuta estas pruebas con Node.js 22. Este prototipo no tiene autenticación, persistencia ni protección para ofrecer un servicio público.
 
 ## Seguridad y privacidad
 

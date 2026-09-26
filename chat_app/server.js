@@ -27,8 +27,8 @@ function createServer() {
 
 if (require.main === module) {
   const { server } = createServer();
-  server.listen(3000, () => {
-    console.log('Chat server running at http://localhost:3000');
+  server.listen(3000, '127.0.0.1', () => {
+    console.log('Chat server running at http://127.0.0.1:3000');
   });
 }
 

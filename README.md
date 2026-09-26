@@ -17,7 +17,7 @@ A collection of small browser and Node.js projects used to practise interface be
 Open its `index.html` directly, or serve the repository locally:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
 Then visit `http://localhost:8000`.
@@ -27,8 +27,11 @@ Then visit `http://localhost:8000`.
 ```bash
 cd chat_app
 npm ci
+npm test
 node server.js
 ```
+
+The chat listens on `127.0.0.1:3000`. Its automated tests cover static files from a different working directory, missing/private paths, and message delivery between two local clients. GitHub Actions runs these tests with Node.js 22. This prototype has no authentication, persistence, or public-service hardening.
 
 ## Security and privacy
 
